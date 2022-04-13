@@ -1,0 +1,50 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "tsx": true,
+      "modules": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+    // 避免prettier规则与eslint冲突,冲突使用prettier规则, prettier需要放置在最后
+//    "prettier/react"// react 与 prettier冲突
+//    "prettier/@typescript-eslint"
+  ],
+  "rules": {
+    "no-unused-expressions": ["error",
+      { "allowShortCircuit": true, "allowTernary": true }], // 允许使用短路、三目
+    "func-names": ["error",
+      "as-needed"], // 需要时添加函数名称
+    "no-param-reassign": ["error",
+      { "props": false }], // 函数形参可修改
+    "no-plusplus": "off",
+    "no-shadow": "off",
+    "no-console": "off",
+    "no-debugger": "off"
+  },
+  "settings": {             //自动发现React的版本，从而进行规范react代码
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".tsx", ".ts", ".js", ".json"]
+      }
+      }
+    },
+  "globals": {}
+}

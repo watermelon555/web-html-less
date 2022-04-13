@@ -1,0 +1,31 @@
+
+.headerBg{
+  height: 350px;
+  background-color: rgb(33, 150, 243);
+  .headerMenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    height: 64px;
+    color: #fff;
+  }
+}
+
+nav{
+  border: 1px solid #000;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+}
+
+.articleWrap{
+  width: 100%;
+  .articleBg{
+    img{
+
+    }
+  }
+}
