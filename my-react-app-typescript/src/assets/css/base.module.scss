@@ -86,9 +86,9 @@ audio, canvas, progress, video {
 }
 
 a {
-
+  text-decoration: none;
   background-color: transparent;
-
+  color: inherit;
 }
 
 a:active, a:hover {

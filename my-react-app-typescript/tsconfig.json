@@ -21,9 +21,13 @@
     "noImplicitAny": true,       // 不允许隐式的 any 类型
     "removeComments": true,      // 删除注释
     "preserveConstEnums": true,  // 保留 const 和 enum 声明
-    "sourceMap": true            // 生成目标文件的sourceMap文件
+    "sourceMap": true ,           // 生成目标文件的sourceMap文件
+    "noImplicitReturns": true,
+    "outDir": "dist",
+    "noUnusedLocals": true
   },
   "include": [
     "src"
-  ]
+  ],
+  "type":"module"
 }

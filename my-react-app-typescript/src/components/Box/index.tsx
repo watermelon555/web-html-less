@@ -1,17 +1,17 @@
-import React, {CSSProperties, ReactElement} from 'react';
-import './index.scss'
+import React, { CSSProperties, ReactElement } from "react"
+import styles from "./index.module.scss"
 
-interface Named {
-  children?: ReactElement,
-  className?: string,
-  style?: CSSProperties
+interface NamedtProps {
+    children?: ReactElement
+    className?: string
+    style?: CSSProperties
 }
 
-export const RenderDescComponent = (props: Named) => {
-  const {children, className, style} = props
-  return (
-    <div className={`project-desc ${className}`} style={{...style}}>
-      {children}
-    </div>
-  )
+export const RenderDescComponent = (props: NamedtProps) => {
+    const { children = null, className = "", style = {} } = props
+    return (
+        <div className={`${styles.projectDesc} ${styles[className || ""]}`} style={{ ...style }}>
+            {children}
+        </div>
+    )
 }

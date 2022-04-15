@@ -1,4 +1,1 @@
-const GlobalStore = () => {
-
-}
-
+const GlobalStore = () => {}
