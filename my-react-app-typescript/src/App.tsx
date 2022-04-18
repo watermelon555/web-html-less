@@ -7,6 +7,7 @@ import { Avatar } from "./components/Avatar"
 import { Menu } from "./components/Menu"
 import { BrowserRouter } from "react-router-dom"
 import MenuProps from "./types"
+import { Footer } from "./components/Footer"
 
 const App = () => {
     const [isShowAside, setIsShowAside] = useState<boolean>(false)
@@ -55,8 +56,10 @@ const App = () => {
         }
     ]
 
-    const handleAside = (e: any) => {
-        setIsShowAside(!isShowAside)
+    const handleAside = () => {
+        if (isShowAside) {
+            setIsShowAside(!isShowAside)
+        }
     }
 
     return (
@@ -79,7 +82,7 @@ const App = () => {
                     <header>
                         <div className={styles.headerBg}>
                             <div className={styles.headerMenu}>
-                                <div className={"menu"} onClick={handleAside}>
+                                <div className={"menu"} onClick={() => setIsShowAside(true)}>
                                     <i className="fa fa-bars" aria-hidden="true" />
                                 </div>
                                 <div>
@@ -88,7 +91,12 @@ const App = () => {
                             </div>
                         </div>
                     </header>
-                    <Router />
+                    <div className={styles.nav}>
+                        <nav>
+                            <Router />
+                        </nav>
+                    </div>
+                    <Footer />
                 </div>
             </BrowserRouter>
         </div>

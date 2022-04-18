@@ -8,8 +8,8 @@ export const Menu = (props: any) => {
     const { menuItem } = props
     const renderMenu = (item: MenuProps, isChild: boolean) => {
         return (
-            <div className={`${styles.menuWrap} ${isChild ? styles.menuItemChild : ""}`} key={item.id}>
-                <div className={styles.menuItem}>
+            <div className={`${styles.menuWrap}`} key={item.id}>
+                <div className={`${styles.menuItem} ${isChild ? styles.menuItemChild : ""}`}>
                     <div className={styles.menu}>
                         <Link to={`${BasePath}${item.href}`} className={styles.link}>
                             <i className={`${styles.icon} fa fa-${item.icon}`} />

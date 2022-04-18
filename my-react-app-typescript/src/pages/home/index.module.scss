@@ -1,21 +1,7 @@
-
-
-.nav{
-  width: 100%;
-  margin-top: -70px;
-  margin-bottom: 100px;
-  nav{
-    //border: 1px solid #000;
-    /* position: fixed;
-     top: 20%;
-     left: 50%;*/
-    //transform: translateX(-50%);
-    width: 60%;
-    margin: 0 auto;
-  }
+nav{
+  padding: 0;
+  background-color: transparent;
 }
-
-
 .commended{
   display: flex;
   justify-content: space-between;
@@ -57,13 +43,10 @@
   margin-top: 16px;
 }
 
-.footer{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 144px;
-  background-color: rgb(33, 150, 243);
-  color: #ffffff;
+.container{
+  width: 60%;
+  margin: 0 auto;
+  background-color: transparent;
 }
 
 
