@@ -1,15 +1,18 @@
 import React from "react"
 import { Route, Routes } from "react-router-dom"
-import { Home } from "../pages/home"
-// import { About } from '../pages/about';
-// import { Grid } from '../pages/grid';
+import Home from "../pages/home"
+import { BasePath } from "../types/config"
+import { Float } from "../pages/float"
+import { Grid } from "../pages/grid"
+import Flex from "../pages/flex"
 
-export const Router: React.FC = () => {
+export const Router = () => {
     return (
         <Routes>
-            <Route path="/" element={<Home />} />
-            {/*    <Route path='/about' element={<About />} />
-      <Route path='/grid' element={<Grid />} /> */}
+            <Route path={BasePath} element={<Home />} />
+            <Route path={`${BasePath}/flex`} element={<Flex />} />
+            <Route path={`${BasePath}/float`} element={<Float />} />
+            <Route path={`${BasePath}/grid`} element={<Grid />} />
         </Routes>
     )
 }

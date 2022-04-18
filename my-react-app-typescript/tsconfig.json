@@ -23,11 +23,12 @@
     "preserveConstEnums": true,  // 保留 const 和 enum 声明
     "sourceMap": true ,           // 生成目标文件的sourceMap文件
     "noImplicitReturns": true,
-    "outDir": "dist",
-    "noUnusedLocals": true
+    "outDir": "build",
+    "noUnusedLocals": true,
+    "baseUrl": "."
   },
-  "include": [
-    "src"
-  ],
+
+  "exclude": ["node_modules", "build"],
+  "includes": ["typed-css.d.ts", "src/*", "src/**/*", "src/pages/*"],
   "type":"module"
 }

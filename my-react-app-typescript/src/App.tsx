@@ -18,11 +18,44 @@ const App = () => {
             child: [],
             href: "/",
             id: 1
+        },
+
+        {
+            name: "布局",
+            active: true,
+            icon: "file-text-o",
+            child: [
+                {
+                    name: "flex",
+                    active: false,
+                    icon: "pagelines",
+                    child: [],
+                    href: "/flex",
+                    id: 1
+                },
+                {
+                    name: "float",
+                    active: false,
+                    icon: "pagelines",
+                    child: [],
+                    href: "/float",
+                    id: 2
+                },
+                {
+                    name: "grid",
+                    active: false,
+                    icon: "pagelines",
+                    child: [],
+                    href: "/grid",
+                    id: 3
+                }
+            ],
+            href: "",
+            id: 2
         }
     ]
 
     const handleAside = (e: any) => {
-        console.log(e, "=======")
         setIsShowAside(!isShowAside)
     }
 

@@ -23,5 +23,8 @@
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
-  "files.eol": "\n"
+  "files.eol": "\n",
+  "alias-skip.mappings": {
+    "@": "/src"
+  }
 }

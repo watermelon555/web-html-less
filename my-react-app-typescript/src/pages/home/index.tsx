@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "./index.module.scss"
 import { Article } from "../../components/Article"
-export const Home = () => {
+const Home = (): React.ReactElement => {
     return (
         <div>
             <div className={styles.nav}>
@@ -37,3 +37,5 @@ export const Home = () => {
         </div>
     )
 }
+
+export default Home

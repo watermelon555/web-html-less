@@ -2,6 +2,7 @@ import styles from "./index.module.scss"
 import React from "react"
 import { Link } from "react-router-dom"
 import MenuProps from "../../types"
+import { BasePath } from "../../types/config"
 
 export const Menu = (props: any) => {
     const { menuItem } = props
@@ -10,7 +11,7 @@ export const Menu = (props: any) => {
             <div className={`${styles.menuWrap} ${isChild ? styles.menuItemChild : ""}`} key={item.id}>
                 <div className={styles.menuItem}>
                     <div className={styles.menu}>
-                        <Link to={item.href} className={styles.link}>
+                        <Link to={`${BasePath}${item.href}`} className={styles.link}>
                             <i className={`${styles.icon} fa fa-${item.icon}`} />
                             <span className={styles.menuName}>{item.name}</span>
                         </Link>
