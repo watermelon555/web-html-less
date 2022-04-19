@@ -1,5 +1,5 @@
 import React, { CSSProperties, ReactElement } from "react"
-import styles from "./index.module.scss"
+import styles from "./index.less"
 
 interface NamedtProps {
     children?: ReactElement

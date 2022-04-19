@@ -1,6 +1,6 @@
 import Image from "../../assets/image/dbssjc.png"
 import React from "react"
-import styles from "./index.module.scss"
+import styles from "./index.less"
 
 export const Float = () => {
     return (

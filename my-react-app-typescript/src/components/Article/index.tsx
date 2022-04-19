@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./index.module.scss"
+import styles from "./index.less"
 // import article from './../../assets/image/bg.jpg'
 import { Avatar } from "./../Avatar"
 export const Article = () => {

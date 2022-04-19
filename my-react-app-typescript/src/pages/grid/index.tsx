@@ -1,6 +1,6 @@
 import React from "react"
 import { RenderDescComponent } from "../../components/Box"
-import styles from "./index.module.scss"
+import styles from "./index.less"
 
 export const Grid = () => {
     const comList = [
@@ -20,14 +20,14 @@ export const Grid = () => {
     return (
         <div className={styles.gridContainer}>
             <div className={styles.gridWrap}>
-                {comList.map((v) => (
+                {comList.map(v => (
                     <RenderDescComponent key={v.name}>
                         <div>{v.name}</div>
                     </RenderDescComponent>
                 ))}
             </div>
             <div className={styles.gridWrapTwo}>
-                {comList.map((v) => (
+                {comList.map(v => (
                     <RenderDescComponent key={v.name}>
                         <div>{v.name}</div>
                     </RenderDescComponent>

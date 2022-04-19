@@ -1,11 +1,10 @@
-const sassResourcesLoader = require("craco-sass-resources-loader")
 const path = require("path")
 const CracoLessPlugin = require("craco-less")
 const NpmImportPlugin = require("less-plugin-npm-import")
 
 const BUILD_PATH = path.resolve(__dirname, "./build")
 
-const pathResolve = pathUrl => path.join(__dirname, pathUrl)
+// const pathResolve = pathUrl => path.join(__dirname, pathUrl)
 
 const removeCssHashPlugin = {
     overrideWebpackConfig: ({ webpackConfig }) => {
@@ -32,8 +31,14 @@ module.exports = {
         {
             plugin: CracoLessPlugin,
             options: {
+                lessOptions: {
+                    javascriptEnabled: true
+                },
                 lessLoaderOptions: {
                     loader: new NpmImportPlugin({ prefix: "~" })
+                },
+                cssLoaderOptions: {
+                    modules: { localIdentName: "[local]_[hash:base64:5]" }
                 },
                 modifyLessRule: () => {
                     return {
@@ -48,24 +53,20 @@ module.exports = {
                                     }
                                 }
                             },
-                            "less-loader"
+                            {
+                                loader: "less-loader",
+                                options: {
+                                    lessOptions: {
+                                        javascriptEnabled: true
+                                    }
+                                }
+                            }
                         ]
                     }
                 }
             }
         },
-        { plugin: removeCssHashPlugin },
-        {
-            plugin: sassResourcesLoader,
-            options: {
-                loader: "style!css?modules&localIdentName=[name]__[local]!sass?sourceMap=true",
-                exclude: path.resolve(__dirname, "./src/*"),
-                resources: ["./src/assets/css/global.module.scss", "./src/assets/css/base.module.scss"],
-                cssLoaderOptions: {
-                    modules: { localIdentName: "[local]_[hash:base64:5]" }
-                }
-            }
-        }
+        { plugin: removeCssHashPlugin }
     ],
     webpack: config => {
         config.resolve.alias = {
@@ -90,11 +91,6 @@ module.exports = {
                     ...config.resolve.alias
                 }
             }
-        }
-    },
-    style: {
-        modules: {
-            localIdentName: "[local]___[hash:base64:5]"
         }
     }
 }

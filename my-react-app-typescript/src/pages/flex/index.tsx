@@ -1,6 +1,6 @@
 import React from "react"
 import { RenderDescComponent } from "../../components/Box"
-import styles from "./index.module.scss"
+import styles from "./index.less"
 
 const Flex = () => {
     const comList = [

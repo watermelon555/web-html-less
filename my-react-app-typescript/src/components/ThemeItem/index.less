@@ -1,0 +1,53 @@
+.boxWrap{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-top: 1px solid #dcdcdc;
+  padding: 20px;
+  .box{
+    width: 20px;
+    height: 20px;
+    border: 2px solid red;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: red;
+    &.checked{
+      color: #ffffff;
+    }
+    &.red{
+      border-color: red;
+      color: red;
+      &.checked{
+        color: #ffffff;
+        background: red;
+      }
+    }
+    &.blue{
+      border-color: blue;
+      color: blue;
+      &.checked{
+        color: #ffffff;
+        background: blue;
+      }
+    }
+    &.green{
+      border-color: green;
+      color: green;
+      &.checked{
+        color: #ffffff;
+        background: green;
+      }
+    }
+    &.pink{
+      border-color: pink;
+      color: pink;
+      &.checked{
+        color: #ffffff;
+        background: pink;
+      }
+    }
+  }
+}
+
