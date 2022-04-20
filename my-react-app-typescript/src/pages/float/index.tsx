@@ -7,7 +7,7 @@ export const Float = () => {
         <div className={styles.container}>
             <header className={styles.clearfix}>
                 <div className={styles.logo}>
-                    <img src={Image} alt="" />
+                    <img src={Image} alt="" className={styles.hImage} />
                 </div>
                 <ul className={`${styles.clearfix} ${styles.navl}`}>
                     <li>首页</li>

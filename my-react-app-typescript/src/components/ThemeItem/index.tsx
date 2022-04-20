@@ -12,10 +12,11 @@ export const ThemeItem = (props: any) => {
 
     return (
         <div className={styles.boxWrap}>
-            {colorItem.map((v: ColorItemProps) => (
+            {colorItem.map((v: ColorItemProps, index: number) => (
                 <div
                     className={`${styles.box} ${styles[v.name]} ${v.active && styles.checked}`}
                     onClick={() => handleTheme(v.name)}
+                    key={index}
                 >
                     <FontAwesomeIcon icon={solid("check")} />
                 </div>

@@ -60,6 +60,13 @@ module.exports = {
                                         javascriptEnabled: true
                                     }
                                 }
+                            },
+                            {
+                                loader: "style-resources-loader",
+                                // preProcessor: "less",
+                                options: {
+                                    patterns: path.resolve(__dirname, "../src/assets/css/variable.less")
+                                }
                             }
                         ]
                     }

@@ -9,11 +9,12 @@ import { solid } from "@fortawesome/fontawesome-svg-core/import.macro"
 import { ThemeItem } from "./components/ThemeItem"
 import styles from "./App.less"
 import { ColorItemProps, MenuProps } from "./types"
+import { Banner } from "./components/Banner"
 
 const App = () => {
     const [isShowAside, setIsShowAside] = useState<boolean>(false)
     const [menuItem, setMenuItem] = useState<MenuProps[]>([])
-    const [theme, setTheme] = useState<string>("blue")
+    const [theme, setTheme] = useState<string>("pink")
     const [colorItem, setColorItem] = useState<ColorItemProps[]>([])
     useEffect(() => {
         const item: MenuProps[] = [
@@ -140,6 +141,7 @@ const App = () => {
                 )}
                 <div className={styles.content} onClick={handleAside}>
                     {isShowAside && <div className={styles.mask} />}
+                    <Banner />
                     <header>
                         <div className={`${styles.headerBg} ${styles[theme]}`}>
                             <div className={styles.headerMenu}>
