@@ -1,7 +1,6 @@
 import React from "react"
 import styles from "./index.less"
-// import article from './../../assets/image/bg.jpg'
-import { Avatar } from "./../Avatar"
+import { Avatar } from "../Avatar"
 export const Article = () => {
     return (
         <div className={styles.articleWrap}>
@@ -12,7 +11,10 @@ export const Article = () => {
                 </div>
             </div>
             <div className={styles.author}>
-                <Avatar />
+                <div className={styles.avatar}>
+                    <Avatar />
+                </div>
+
                 <div className={styles.name}>なんでも</div>
             </div>
         </div>

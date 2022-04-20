@@ -125,7 +125,10 @@ const App = () => {
                 {isShowAside && (
                     <aside>
                         <div className={styles.asideHeader}>
-                            <Avatar />
+                            <div className={styles.avatar}>
+                                <Avatar />
+                            </div>
+
                             <div>
                                 <div className={styles.asideName}>なんでも</div>
                                 <div className={styles.asideDesc}>なんでも</div>
