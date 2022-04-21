@@ -59,6 +59,48 @@ const App = () => {
                 ],
                 href: "",
                 id: 2
+            },
+            {
+                name: "css",
+                active: true,
+                icon: solid("dice-three"),
+                child: [
+                    {
+                        name: "Cybr",
+                        active: false,
+                        icon: solid("dice-three"),
+                        child: [],
+                        href: "/cybr",
+                        id: 1
+                    }
+                ],
+                href: "",
+                id: 3
+            },
+            {
+                name: "Webgl",
+                active: true,
+                icon: solid("dice-three"),
+                child: [],
+                href: "/webgl",
+                id: 4
+            },
+            {
+                name: "Three",
+                active: true,
+                icon: solid("dice-three"),
+                child: [
+                    {
+                        name: "boxWrap",
+                        active: true,
+                        icon: solid("dice-three"),
+                        child: [],
+                        href: "/boxWrap",
+                        id: 1
+                    }
+                ],
+                href: "",
+                id: 5
             }
         ]
         const colorList: ColorItemProps[] = [
@@ -129,7 +171,6 @@ const App = () => {
                             <div className={styles.avatar}>
                                 <Avatar />
                             </div>
-
                             <div>
                                 <div className={styles.asideName}>なんでも</div>
                                 <div className={styles.asideDesc}>なんでも</div>

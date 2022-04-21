@@ -84,7 +84,12 @@ aside{
   }
 }
 
+.App{
+  height: 100vh;
+}
+
 .content{
+  height: 100%;
   .mask{
     position: fixed;
     top: 0;
@@ -99,6 +104,12 @@ aside{
   width: 100%;
   margin-top: -70px;
   margin-bottom: 100px;
+  //min-height: calc(100vh - 144px - 220px - 9.375vw - 100px);
+  //position: relative;
+  nav{
+    position: relative;
+    min-height: calc(100vh - 144px - 220px - 9.375vw - 100px)
+  }
 }
 
 

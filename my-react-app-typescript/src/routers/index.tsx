@@ -5,6 +5,9 @@ import { BasePath } from "../types/config"
 import { Float } from "../pages/float"
 import { Grid } from "../pages/grid"
 import Flex from "../pages/flex"
+import { Cybr } from "../components/Cybr"
+import { WebGl } from "../pages/webgl"
+import BoxWrap from "../pages/BoxWrap"
 
 export const Router = () => {
     return (
@@ -13,6 +16,9 @@ export const Router = () => {
             <Route path={`${BasePath}/flex`} element={<Flex />} />
             <Route path={`${BasePath}/float`} element={<Float />} />
             <Route path={`${BasePath}/grid`} element={<Grid />} />
+            <Route path={`${BasePath}/cybr`} element={<Cybr />} />
+            <Route path={`${BasePath}/webgl`} element={<WebGl />} />
+            <Route path={`${BasePath}/boxWrap`} element={<BoxWrap />} />
         </Routes>
     )
 }
