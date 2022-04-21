@@ -1,5 +1,6 @@
 const path = require("path")
 const CracoLessPlugin = require("craco-less")
+const CracoAntDesign = require("craco-antd")
 const NpmImportPlugin = require("less-plugin-npm-import")
 
 const BUILD_PATH = path.resolve(__dirname, "./build")
@@ -28,6 +29,12 @@ const removeCssHashPlugin = {
 module.exports = {
     // mode: "development",
     plugins: [
+        /*    {
+            plugin: CracoAntDesign
+            // options: {
+            //     customizeThemeLessPath: path.join(__dirname, "src/assets/css/variable.less")
+            // }
+        }, */
         {
             plugin: CracoLessPlugin,
             options: {
