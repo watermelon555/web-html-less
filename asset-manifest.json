@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/web-html-less/static/css/main.css",
-    "main.js": "/web-html-less/static/js/main.85f860b6.js",
+    "main.js": "/web-html-less/static/js/main.506c18fe.js",
     "static/media/bilibili-winter-view-2.jpg": "/web-html-less/static/media/bilibili-winter-view-2.e9b80fc07009fce7681c.jpg",
     "static/media/bilibili-winter-view-1.jpg": "/web-html-less/static/media/bilibili-winter-view-1.e55ef6e5615ab76bd160.jpg",
     "static/media/bg.jpg": "/web-html-less/static/media/bg.b1e3a835627199c04f7e.jpg",
@@ -15,10 +15,10 @@
     "static/media/bilibili-winter-view-3-snow.png": "/web-html-less/static/media/bilibili-winter-view-3-snow.5a41d3dc457682f8146e.png",
     "index.html": "/web-html-less/index.html",
     "main.css.map": "/web-html-less/static/css/main.css.map",
-    "main.85f860b6.js.map": "/web-html-less/static/js/main.85f860b6.js.map"
+    "main.506c18fe.js.map": "/web-html-less/static/js/main.506c18fe.js.map"
   },
   "entrypoints": [
     "static/css/main.css",
-    "static/js/main.85f860b6.js"
+    "static/js/main.506c18fe.js"
   ]
 }
